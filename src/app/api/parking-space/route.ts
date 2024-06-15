@@ -7,7 +7,7 @@ export async function GET(
   _request: NextRequest,
 ) {
   try {
-    const result = await query('SELECT id, group, space_one, space_two, space_three, space_four, space_five, space_six FROM your_table');
+    const result = await query('SELECT "id", "group", "space_one", "space_two", "space_three", "space_four", "space_five", "space_six" FROM "parking_space"');
     return NextResponse.json({ data: result.rows }, { status: 200 });
   } catch (error) {
     console.error('Error fetching data:', error);
